@@ -1,0 +1,49 @@
+.container-fluid{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.instructions{
+  border: 1px solid #909090;
+  border-radius: 5pt;
+  padding: 1%;
+  background-color: #F6F6F6;
+}
+
+.form-inline{
+  padding:1%;
+}
+
+.form-control{
+}
+
+.btn{
+}
+
+.navbar-brand{
+  font-size: 1.75em;
+}
+
+.row{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.list-item{
+  position: relative;
+}
+
+#list_button{
+  float:right;
+}
+
+body{
+  font-face: Arial;
+  font-size: 1.5em;
+  color: #808080;
+}
+
+h3{
+  color: rgb(54, 88, 134);
+  text-align: center;
+}

@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en"  ng-app = "ShoppingListComponentApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Internet Movie Database - Scanning Program</title>
+  <meta name="test program" content="test program">
+
+  <!-- Import stylesheets -->
+	<link href="styles/bootstrap.min.css" rel="stylesheet">
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+  <link rel="stylesheet" href="styles/styles.css">
+
+   <!-- Import Javascript -->
+   <script src="js/jquery-3.1.1.slim.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/angular.min.js"></script>
+   <script src="js/app3.js"></script>
+ </head>
+
+ <body>
+   <!-- Add the NavBar -->
+   <nav class = "navbar navbar-default">
+     <div class = "container-fluid">
+       <div class = "navbar-header">
+         <div class = "navbar-brand">
+          Fun Shopping List Program
+        </div> <!--- NavBar Brand -->
+      </div> <!-- Navbar Header -->
+    </div> <!-- Container fluid -->
+  </nav> <!-- Navbar start -->
+
+  <div class = "container-fluid" ng-controller = "ShoppingListController as list">
+    <div class = "row">
+      <div class = "instructions">
+        This is my test application to practice AnguarJS while in class.
+      </div>
+    </div> <!-- Row -->
+    <div class = "row">
+      <div class = "form-inline">
+        <div class = "form-group">
+          <label for = "item-name">Item Name</label>
+          <input type = "text" id = "item-name" placeholder="Cookies" class = "form-control" ng-model = "list.itemName">
+        </div> <!-- Row -->
+        <div class = "form-group">
+          <label for = "quantity">Quantity</label>
+          <input id = "quantity" type = "text" placeholder="100" class = "form-control" ng-model = "list.itemQuantity">
+        </div>
+        <button class = "btn btn-primary" ng-click = "list.addItem();">Add Item</button>
+      </div> <!-- Form -->
+    </div> <!-- Row -->
+    <div class = "row">
+      <div class = "alert alert-info">{{ list.lastRemoved }}</div>
+    </div>
+    <div class = "row">
+      <shopping-list
+        items="list.items"
+        title="{{list.title}}"
+        on-remove="list.removeItem(index)"></shopping-list>
+    </div> <!-- Row -->
+  </div> <!-- Container -->
+
+ </body>
+
+ </html>

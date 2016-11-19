@@ -1,0 +1,11 @@
+<h3>{{ $ctrl.myTitle }}</h3>
+<ul class ="list-group">
+  <li ng-repeat = "item in $ctrl.items" class = "list-group-item">
+    {{item.name}} {{item.quantity}}
+    <div id = "list_button">
+      <button ng-click = "$ctrl.remove($index);" class = "btn">Remove Item</button>
+    </div>
+  </li>
+</ul>
+
+<div class="error">WARNING! WARNING! COOKIES DETECTED!</div>
